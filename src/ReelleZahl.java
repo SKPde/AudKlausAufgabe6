@@ -11,20 +11,20 @@ public class ReelleZahl extends Zahl {
 	public Zahl add(Zahl zahl) { // Aditionsmethode
 
 		ReelleZahl eingabe = (ReelleZahl) zahl;
-		return (Zahl) new ReelleZahl(this.value + eingabe.value);
+		return new ReelleZahl(value + eingabe.value);
 	}
 
 	@Override
 	public Zahl mul(Zahl zahl) { // Multiplikationsmethode
 
 		ReelleZahl eingabe = (ReelleZahl) zahl;
-		return (Zahl) new ReelleZahl(this.value * eingabe.value);
+		return new ReelleZahl(value * eingabe.value);
 
 	}
 
 	public String toString() { // String Darstellung
 
-		return "" + this.value;
+		return "" + value;
 
 	}
 
@@ -32,7 +32,7 @@ public class ReelleZahl extends Zahl {
 
 		ReelleZahl eingabe = (ReelleZahl) zahl;
 
-		return (eingabe.value == this.value);
+		return (value == eingabe.value);
 	}
 
 }
